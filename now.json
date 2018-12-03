@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "alias": ["react-2018.now.sh"],
+  "name": "React 2018 in review",
+  "builds": [{ "src": "next.config.js", "use": "@now/next" }]
+}
