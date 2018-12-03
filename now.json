@@ -3,9 +3,19 @@
   "alias": ["react-2018.now.sh"],
   "name": "React 2018 in review",
   "builds": [
-    { "src": "package.json", "use": "@now/static-build", "config": {
-      "distDir": "dist",
-      "useBuildUtils": "@now/build-utils@canary"
-    } }
+    {
+      "src": "next.config.js",
+      "use": "@now/next",
+      "config": {
+        "useBuildUtils": "@now/build-utils@canary"
+      }
+    },
+    {
+      "src": "static/*",
+      "use": "@now/static",
+      "config": {
+        "useBuildUtils": "@now/build-utils@canary"
+      }
+    }
   ]
 }
