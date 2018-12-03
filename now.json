@@ -3,11 +3,6 @@
   "alias": ["react-2018.now.sh"],
   "name": "React 2018 in review",
   "builds": [
-    { "src": "static/*", "use": "@now/static" },
-    { "src": "next.config.js", "use": "@now/next" }
-  ],
-  "routes": [
-    { "src": "/static/(?<file>[^/]*)", "headers": {"cache-control": "s-maxage=1000"}, "dest": "/static/$file" },
-    { "src": "/static", "status": 301, "headers": { "Location": "/" } }
+    { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "dist" } }
   ]
 }
